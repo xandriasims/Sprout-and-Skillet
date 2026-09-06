@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" role="img" aria-labelledby="title desc">
+  <title id="title">Sprout and Skillet storybook café</title>
+  <desc id="desc">A warm illustrated countryside café with garden beds, lanterns, Aunt June and a young chef.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9ed5f4"/><stop offset="1" stop-color="#f7d8a4"/></linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ead7b7"/><stop offset="1" stop-color="#c9ad82"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6f4b2f"/><stop offset="1" stop-color="#3f2d22"/></linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5f8c46"/><stop offset="1" stop-color="#2f5834"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#2b1f16" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="900" height="1600" fill="url(#sky)"/>
+  <circle cx="130" cy="155" r="82" fill="#fff5c9" opacity=".7" filter="url(#soft)"/>
+  <path d="M0 510 Q160 350 300 480 T610 450 T900 500 V900 H0Z" fill="#7da46f"/>
+  <path d="M0 610 Q170 470 340 590 T650 570 T900 620 V900 H0Z" fill="#557a54" opacity=".9"/>
+  <rect x="145" y="360" width="660" height="650" rx="30" fill="url(#stone)" filter="url(#shadow)"/>
+  <path d="M105 390 L450 180 L840 390 Z" fill="#a95d3d"/>
+  <path d="M135 390 L450 225 L805 390 Z" fill="#c97d4e"/>
+  <rect x="250" y="680" width="400" height="330" rx="24" fill="#315247"/>
+  <rect x="282" y="710" width="336" height="300" rx="16" fill="#214036"/>
+  <rect x="185" y="430" width="530" height="150" rx="18" fill="#d6b685" stroke="#79583a" stroke-width="10"/>
+  <text x="450" y="492" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="62" fill="#2f4b3c">Sprout &amp; Skillet</text>
+  <text x="450" y="545" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" letter-spacing="6" fill="#6e4a31">GOOD FOOD · BRIGHTER DAYS</text>
+  <g opacity=".95"><circle cx="220" cy="420" r="26" fill="#4c7a4f"/><circle cx="685" cy="405" r="34" fill="#4c7a4f"/><circle cx="740" cy="470" r="25" fill="#688f55"/><circle cx="170" cy="515" r="22" fill="#688f55"/></g>
+  <g fill="#fff6df"><circle cx="205" cy="414" r="8"/><circle cx="700" cy="405" r="8"/><circle cx="748" cy="470" r="7"/><circle cx="176" cy="515" r="7"/></g>
+  <rect x="0" y="1020" width="900" height="580" fill="#d4b071"/>
+  <path d="M0 1120 C120 1050 210 1090 320 1050 S530 1080 690 1035 S820 1060 900 1025 V1600 H0Z" fill="#6b8d4d"/>
+  <g fill="#d9a441"><circle cx="85" cy="1150" r="18"/><circle cx="135" cy="1210" r="16"/><circle cx="730" cy="1130" r="18"/><circle cx="790" cy="1195" r="20"/></g>
+  <g fill="#b84b3b"><circle cx="145" cy="1320" r="28"/><circle cx="195" cy="1360" r="25"/><circle cx="725" cy="1325" r="26"/></g>
+  <g transform="translate(190 860)" filter="url(#shadow)">
+    <ellipse cx="120" cy="430" rx="112" ry="30" fill="#2b231c" opacity=".18"/>
+    <circle cx="120" cy="118" r="82" fill="#d7ab85"/>
+    <path d="M45 105 Q70 15 124 35 Q175 12 202 102 Q176 69 120 70 Q73 72 45 105Z" fill="#e9e1d1"/>
+    <path d="M40 92 Q76 6 121 46 Q165 7 207 91" fill="none" stroke="#efeadf" stroke-width="28" stroke-linecap="round"/>
+    <path d="M58 60 Q120 20 190 65" fill="none" stroke="#b34b3c" stroke-width="18"/>
+    <circle cx="92" cy="114" r="6" fill="#3a2e22"/><circle cx="150" cy="114" r="6" fill="#3a2e22"/>
+    <path d="M92 147 Q121 166 150 147" fill="none" stroke="#8d5a3b" stroke-width="6" stroke-linecap="round"/>
+    <rect x="28" y="192" width="184" height="238" rx="58" fill="#6e7652"/>
+    <path d="M64 205 L177 205 L158 430 L79 430Z" fill="#c9a980"/>
+    <path d="M62 205 Q115 240 176 205" fill="#8f5337" opacity=".55"/>
+  </g>
+  <g transform="translate(425 835)" filter="url(#shadow)">
+    <ellipse cx="118" cy="455" rx="118" ry="30" fill="#2b231c" opacity=".18"/>
+    <circle cx="118" cy="126" r="83" fill="#d89c6f"/>
+    <path d="M45 110 Q54 22 126 38 Q185 18 202 109 Q175 70 122 74 Q73 69 45 110Z" fill="#5a3427"/>
+    <path d="M56 62 Q114 12 180 60" fill="none" stroke="#3f6d52" stroke-width="18"/>
+    <circle cx="90" cy="121" r="6" fill="#3a2e22"/><circle cx="148" cy="121" r="6" fill="#3a2e22"/>
+    <path d="M92 154 Q119 171 146 154" fill="none" stroke="#8d5a3b" stroke-width="6" stroke-linecap="round"/>
+    <rect x="23" y="205" width="194" height="245" rx="58" fill="#f4eee1"/>
+    <path d="M68 218 L168 218 L158 450 L78 450Z" fill="#2f4b3c"/>
+    <path d="M70 218 L95 265 L118 218 L142 264 L169 218" fill="none" stroke="#d9a441" stroke-width="6" opacity=".7"/>
+    <rect x="179" y="245" width="18" height="158" rx="9" fill="#7d5231" transform="rotate(-12 188 324)"/>
+  </g>
+  <g transform="translate(680 1350)"><ellipse cx="65" cy="78" rx="70" ry="22" fill="#2b231c" opacity=".17"/><path d="M10 52 Q26 12 62 34 Q93 5 123 48 Q116 92 66 102 Q20 92 10 52Z" fill="#c7763e"/><path d="M22 47 L5 18 L42 38 M104 41 L130 13 L116 52" fill="#c7763e"/><circle cx="48" cy="58" r="5"/><circle cx="82" cy="58" r="5"/><path d="M54 76 Q66 84 78 76" fill="none" stroke="#4b2e22" stroke-width="4"/></g>
+  <g fill="none" stroke="#2f5834" stroke-width="16" stroke-linecap="round"><path d="M185 390 Q170 290 250 235"/><path d="M715 390 Q770 295 700 235"/></g>
+  <g fill="url(#leaf)"><ellipse cx="205" cy="320" rx="18" ry="42" transform="rotate(-35 205 320)"/><ellipse cx="238" cy="285" rx="18" ry="42" transform="rotate(30 238 285)"/><ellipse cx="690" cy="300" rx="18" ry="42" transform="rotate(-30 690 300)"/><ellipse cx="733" cy="340" rx="18" ry="42" transform="rotate(35 733 340)"/></g>
+</svg>
