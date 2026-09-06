@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#2F4B3C">
+<meta name="description" content="Sprout & Skillet — a cozy farm-to-table restaurant game. Grow crops, cook dishes, and keep your guests happy.">
+<title>Sprout &amp; Skillet</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍳%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+  <div id="app-header">
+    <header id="sky">
+      <div class="sky-layer">
+        <div id="sun" class="celestial sun"></div>
+        <div id="moon" class="celestial moon"></div>
+        <div class="stars"></div>
+        <div class="clouds"><i></i><i></i><i></i></div>
+        <div class="hills"></div>
+      </div>
+      <div class="topbar">
+        <div class="row1">
+          <h1>🍳 Sprout &amp; Skillet</h1>
+          <div class="row1-right">
+            <button class="icon-btn" data-action="open-recipes" title="Recipe book" aria-label="Recipe book">📖</button>
+            <button class="icon-btn" data-action="open-guests" title="Guest guide" aria-label="Guest guide">🧑‍🤝‍🧑</button>
+            <button class="icon-btn" data-action="open-settings" title="Settings" aria-label="Settings">⚙️</button>
+            <div id="coins" title="Coins">🪙 <span id="coins-value">0</span></div>
+          </div>
+        </div>
+        <div class="row2">
+          <div id="level-badge">Lv 1</div>
+          <div id="prestige-badge" style="display:none;"></div>
+          <div class="xp-track" title="Experience"><div class="xp-fill" id="xp-fill"></div><span class="xp-label" id="xp-label"></span></div>
+        </div>
+        <div class="row3">
+          <span class="sky-chip" id="day-chip"></span>
+          <span class="sky-chip" id="weather-chip"></span>
+        </div>
+      </div>
+    </header>
+
+    <div id="status-strip">
+      <span id="rep-icon">🥉</span>
+      <div id="rep-block"><span id="rep-name">Bronze</span><div class="rep-track"><div class="rep-fill" id="rep-fill"></div></div></div>
+      <div id="combo-badge">🔥 <span id="combo-count"></span></div>
+    </div>
+    <div id="event-banner" style="display:none;"></div>
+    <div id="ticket-rail"></div>
+
+    <nav id="tabs" aria-label="Sections">
+      <button class="tab-btn active" data-action="switch-tab" data-tab="garden">🌱 Garden<span class="tab-badge" id="badge-garden"></span></button>
+      <button class="tab-btn" data-action="switch-tab" data-tab="kitchen">🍳 Kitchen<span class="tab-badge" id="badge-kitchen"></span></button>
+      <button class="tab-btn" data-action="switch-tab" data-tab="dining">🍽️ Dining<span class="tab-badge" id="badge-dining"></span></button>
+      <button class="tab-btn" data-action="switch-tab" data-tab="shop">🛒 Shop</button>
+      <button class="tab-btn" data-action="switch-tab" data-tab="goals">🏆 Goals</button>
+    </nav>
+    <div id="tutorial-banner" style="display:none;"></div>
+  </div>
+
+  <main>
+    <section class="view active" id="view-garden">
+      <div class="section-title"><span>Your Garden</span><button class="btn small" id="harvest-all-btn" data-action="harvest-all" style="display:none;">🧺 Harvest all</button></div>
+      <div class="chip-row" id="garden-info"></div>
+      <div class="land-panel"><div class="fence"></div><div id="garden-grid"></div></div>
+      <div class="section-title"><span>Basket</span></div>
+      <div class="chip-row" id="garden-basket"></div>
+    </section>
+
+    <section class="view" id="view-kitchen">
+      <div class="section-title"><span>Pantry</span></div>
+      <div class="tray-shelf" id="pantry-strip"></div>
+      <div class="section-title"><span>Cooking Stations</span><button class="btn small" id="collect-all-btn" data-action="collect-all" style="display:none;">🧺 Collect all</button></div>
+      <div class="hint">Tap a station to cook. Collect within a few seconds of it finishing for a ✨ Perfect plate.</div>
+      <div class="floor-panel"><div class="tiles"></div><div id="stations-grid"></div></div>
+      <div class="section-title"><span>The Pass</span></div>
+      <div class="pass" id="pass-strip"></div>
+    </section>
+
+    <section class="view" id="view-dining">
+      <div class="section-title"><span>Dining Room</span></div>
+      <div class="chip-row" id="dining-info"></div>
+      <div class="dining-panel"><div id="tables-grid"></div></div>
+    </section>
+
+    <section class="view" id="view-shop">
+      <div class="section-title"><span>Expand</span></div>
+      <div id="expand-list"></div>
+      <div class="section-title"><span>Staff</span></div>
+      <div class="hint">Chefs cook faster. Servers keep guests patient and tip better. Wages are due every minute — miss a payday and someone quits.</div>
+      <div id="staff-list"></div>
+      <div class="section-title"><span>Upgrades</span></div>
+      <div id="upgrades-list"></div>
+      <div class="section-title"><span>Prestige</span></div>
+      <div class="hint">Max out your restaurant, then retire and reopen for a permanent tip bonus.</div>
+      <div id="prestige-card"></div>
+    </section>
+
+    <section class="view" id="view-goals">
+      <div class="section-title"><span>Daily Orders</span></div>
+      <div class="hint">Three rotating orders. Finish one and a new one takes its place. Swap one order per day.</div>
+      <div id="quests-list"></div>
+      <div class="section-title"><span>Achievements</span></div>
+      <div id="achievements-list"></div>
+      <div class="section-title"><span>Lifetime Stats</span></div>
+      <div class="stats" id="stats-list"></div>
+    </section>
+  </main>
+
+  <div id="modal-overlay" role="dialog" aria-modal="true">
+    <div id="modal-panel">
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+      <button class="modal-close" id="modal-close" data-action="modal-close">Close</button>
+    </div>
+  </div>
+
+  <div id="toast-container" aria-live="polite"></div>
+  <div id="weather-layer" aria-hidden="true"><div class="rain"></div><div class="rain back"></div></div>
+  <div id="ambient-layer" aria-hidden="true"></div>
+  <div id="night-dim" aria-hidden="true"></div>
+  <div id="flash" class="flash" aria-hidden="true"></div>
+  <div id="fx-layer" aria-hidden="true"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

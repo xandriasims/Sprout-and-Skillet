@@ -1,0 +1,15 @@
+{
+  "name": "sprout-and-skillet",
+  "version": "2.0.0",
+  "description": "A cozy farm-to-table restaurant game. Grow crops, cook dishes, keep your guests happy.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve -l 8080 .",
+    "test": "node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  },
+  "license": "MIT"
+}
