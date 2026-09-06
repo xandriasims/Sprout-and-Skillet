@@ -12,8 +12,28 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/storybook.css">
 </head>
 <body>
+<div id="storybook-intro" aria-hidden="true">
+  <img class="storybook-art" src="assets/storybook-intro.svg" alt="Aunt June and the new chef standing outside the cozy Sprout & Skillet café.">
+  <div class="storybook-shade"></div>
+  <div class="storybook-top">
+    <button class="storybook-skip" data-storybook-action="close">SKIP →</button>
+  </div>
+  <div class="storybook-panel">
+    <div class="storybook-name">Aunt June</div>
+    <div class="storybook-dialogue">
+      <p>Well... this is it.</p>
+      <p>Your grandfather called it <strong>Sprout &amp; Skillet.</strong></p>
+      <p>It looked better when he was alive.</p>
+      <p><strong>Probably.</strong></p>
+    </div>
+    <button class="storybook-open" data-storybook-action="close">OPEN THE DOORS <span aria-hidden="true">→</span></button>
+    <div class="storybook-subtitle">Your restaurant starts today</div>
+  </div>
+</div>
+
 <div id="app">
   <div id="app-header">
     <header id="sky">
@@ -137,5 +157,6 @@
 <script src="js/engine.js"></script>
 <script src="js/render.js"></script>
 <script src="js/main.js"></script>
+<script src="js/storybook.js"></script>
 </body>
 </html>
